@@ -8,7 +8,7 @@ import tensorflow as tf
 import tensorflow_probability as tfp
 from tensorflow_probability import distributions as tfd
 
-# Tensorflow prints a lot of logging info -- this it just to quiet it down.
+# Tensorflow prints a lot of logging info -- this just to quiet it down.
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 np.random.seed(123)
