@@ -23,19 +23,14 @@ The minimal usage example is in ```shell GP_example_new.ipynb```, using ```shell
 ### ```shell GRN_functions.py``` functions
 
 #### 1. ```shell get_likelihood(X: np.array, Y: np.array) -> tuple```
-Initializes a Gaussian regression model using a Matern 3/2 kernel and optimizes parameters using BFGS. Returns the log marginal likelihood and the trained model.
+  Initializes a Gaussian regression model using a Matern 3/2 kernel and optimizes parameters using BFGS. Returns the log marginal likelihood and the trained model.
 
-Parameters:
-
-X: Parent gene expression vector (numpy array)
-
-Y: Target gene expression vector (numpy array)
-
-Returns:
-
-Log marginal likelihood (float)
-
-Trained gpflow model
+  Parameters:
+  X: Parent gene expression vector (numpy array)
+  Y: Target gene expression vector (numpy array)
+  Returns:
+  Log marginal likelihood (float)
+  Trained gpflow model
 
 
 #### 2. ```shell plot_gp(parent, target, m, bayes_factors, x_label=None, y_label=None, save_file=False, plt_x_lim=(-0.1, 1.1))```
