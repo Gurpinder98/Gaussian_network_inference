@@ -91,16 +91,16 @@ Computes the log marginal likelihood for multiple gene pairs and returns a struc
 #### 6. ```experimental_functions``` class
 
 Contains alternative methods for model fitting and inference,\
-```get_likelihood_modified(X, Y)```: Introduces parameter bounds and priors for the GPR model.
-```get_likelihood_rational_quad(X, Y)```: Uses a Rational Quadratic kernel instead of Matern 3/2.
-```get_network_modified(parent_target_dict, plot={})```: Alternative network inference method.
-```fit_gaussian_on_gene(Time, gene)```: Fits a GPR model to a single gene over time.
+```get_likelihood_modified(X, Y)```: Introduces parameter bounds and priors for the GPR model.\
+```get_likelihood_rational_quad(X, Y)```: Uses a Rational Quadratic kernel instead of Matern 3/2.\
+```get_network_modified(parent_target_dict, plot={})```: Alternative network inference method.\
+```fit_gaussian_on_gene(Time, gene)```: Fits a GPR model to a single gene over time.\
 ```calculate_random_log_marginal_likelihood_deprecated(...)```: Older version of random likelihood calculation.
 
 
 ## Reference
 Aijö, T., & Lähdesmäki, H. (2009). Learning gene regulatory networks from gene expression measurements using non-parametric molecular kinetics.\
-Bioinformatics (Oxford, England), 25(22), 2937–2944. [https://doi.org/10.1093/bioinformatics/btp511]
+Bioinformatics (Oxford, England), 25(22), 2937–2944. https://doi.org/10.1093/bioinformatics/btp511
 
 
 
