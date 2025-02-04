@@ -23,41 +23,31 @@ The minimal usage example is in ```shell GP_example_new.ipynb```, using ```shell
 ### ```shell GRN_functions.py``` functions
 
 #### 1. ```shell get_likelihood(X: np.array, Y: np.array) -> tuple```
-  Initializes a Gaussian regression model using a Matern 3/2 kernel and optimizes parameters using BFGS. Returns the log marginal likelihood and the trained model.
+  Initializes a Gaussian regression model using a Matern 3/2 kernel and optimizes parameters using BFGS. Returns the log marginal likelihood and the trained model.\
 
-  Parameters:
-  X: Parent gene expression vector (numpy array)
-  Y: Target gene expression vector (numpy array)
-  Returns:
-  Log marginal likelihood (float)
-  Trained gpflow model
-
+  Parameters:\
+  X: Parent gene expression vector (numpy array)\
+  Y: Target gene expression vector (numpy array)\
+  Returns:\
+  Log marginal likelihood (float)\
+  Trained gpflow model\
 
 #### 2. ```shell plot_gp(parent, target, m, bayes_factors, x_label=None, y_label=None, save_file=False, plt_x_lim=(-0.1, 1.1))```
 
-Visualizes GPR model predictions by sampling functions and plotting them along with confidence intervals.
-
-Parameters:
-
-parent: Parent gene expression data
-
-target: Target gene expression data
-
-m: Trained GPR model
-
-bayes_factors: List of Bayes factors for model assessment
-
-x_label: Label for X-axis (optional)
-
-y_label: Label for Y-axis (optional)
-
-save_file: Path to save the plot (optional)
-
-plt_x_lim: X-axis limits (default: (-0.1, 1.1))
-
-Output:
-
-Displays or saves the plot.
+  Visualizes GPR model predictions by sampling functions and plotting them along with confidence intervals.
+  
+  Parameters:\
+  parent: Parent gene expression data\
+  target: Target gene expression data\
+  m: Trained GPR model\
+  bayes_factors: List of Bayes factors\
+  x_label: Label for X-axis (optional)\
+  y_label: Label for Y-axis (optional)\
+  save_file: Path to save the plot (optional)\
+  plt_x_lim: X-axis limits (default: (-0.1, 1.1))\
+  
+  Output:\
+  Displays or saves the plot.\
 
 
 #### 3. ```shell calculate_random_log_marginal_likelihood(number_of_timepoints: int, number_of_random_genes: int = 5) -> float```
