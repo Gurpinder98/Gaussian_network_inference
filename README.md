@@ -32,7 +32,7 @@ The minimal usage example is in ```GP_example_new.ipynb```, using ```dummy_data_
   ```Log marginal likelihood``` (float)\
   ```Trained gpflow model```
 
-#### 2. ```shell plot_gp(parent, target, m, bayes_factors, x_label=None, y_label=None, save_file=False, plt_x_lim=(-0.1, 1.1))```
+#### 2. ```plot_gp(parent, target, m, bayes_factors, x_label=None, y_label=None, save_file=False, plt_x_lim=(-0.1, 1.1))```
 
   Visualizes GPR model predictions by sampling functions and plotting them along with confidence intervals.
   
@@ -50,7 +50,7 @@ The minimal usage example is in ```GP_example_new.ipynb```, using ```dummy_data_
   Displays or saves the plot.
 
 
-#### 3. ```shell calculate_random_log_marginal_likelihood(number_of_timepoints: int, number_of_random_genes: int = 5) -> float```
+#### 3. ```calculate_random_log_marginal_likelihood(number_of_timepoints: int, number_of_random_genes: int = 5) -> float```
 
 Computes log marginal likelihood for randomly generated gene expression values, used as a baseline for Bayesian inference.
 
@@ -62,7 +62,7 @@ Computes log marginal likelihood for randomly generated gene expression values, 
 ```Mean log marginal likelihood``` (float)
 
 
-#### 4. ```shell calculate_bayes_factor(log_marginal_likelihood: np.array, random_log_marginal_likelihood: float) -> float```
+#### 4. ```calculate_bayes_factor(log_marginal_likelihood: np.array, random_log_marginal_likelihood: float) -> float```
 
 Computes the Bayes Factor, quantifying the strength of evidence for the given gene relationship.
 
@@ -73,7 +73,7 @@ Computes the Bayes Factor, quantifying the strength of evidence for the given ge
 **Returns**:\
 ```Bayes Factor``` (logarithmic scale)
 
-#### 5. ```shell get_network(parent_target_dict: dict, plot: dict={}) -> pd.DataFrame```
+#### 5. ```get_network(parent_target_dict: dict, plot: dict={}) -> pd.DataFrame```
 
 Computes the log marginal likelihood for multiple gene pairs and returns a structured network representation in a DataFrame.
 
@@ -88,6 +88,19 @@ Computes the log marginal likelihood for multiple gene pairs and returns a struc
 *log_marginal_likelihood*: Model likelihood estimate\
 *lengthscale, variance, variance_n*: Model hyperparameters
 
+#### 6. ```experimental_functions``` class
+
+Contains alternative methods for model fitting and inference,\
+```get_likelihood_modified(X, Y)```: Introduces parameter bounds and priors for the GPR model.
+```get_likelihood_rational_quad(X, Y)```: Uses a Rational Quadratic kernel instead of Matern 3/2.
+```get_network_modified(parent_target_dict, plot={})```: Alternative network inference method.
+```fit_gaussian_on_gene(Time, gene)```: Fits a GPR model to a single gene over time.
+```calculate_random_log_marginal_likelihood_deprecated(...)```: Older version of random likelihood calculation.
+
+
+## Reference
+Aijö, T., & Lähdesmäki, H. (2009). Learning gene regulatory networks from gene expression measurements using non-parametric molecular kinetics.\
+Bioinformatics (Oxford, England), 25(22), 2937–2944. [https://doi.org/10.1093/bioinformatics/btp511]
 
 
 
