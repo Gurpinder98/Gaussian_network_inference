@@ -99,7 +99,7 @@ Contains alternative methods for model fitting and inference,\
 
 
 ## Reference
-Aijö, T., & Lähdesmäki, H. (2009). Learning gene regulatory networks from gene expression measurements using non-parametric molecular kinetics.\
+1. Aijö, T., & Lähdesmäki, H. (2009). Learning gene regulatory networks from gene expression measurements using non-parametric molecular kinetics.\
 Bioinformatics (Oxford, England), 25(22), 2937–2944. https://doi.org/10.1093/bioinformatics/btp511
 
 
