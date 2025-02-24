@@ -22,7 +22,7 @@ The minimal usage example is in ```GP_example_new.ipynb```, using ```dummy_data_
 
 ### ```GRN_functions.py``` functions
 
-#### 1. ```shell get_likelihood(X: np.array, Y: np.array) -> tuple```
+#### 1. ```get_likelihood(X: np.array, Y: np.array) -> tuple```
   Initializes a Gaussian regression model using a Matern 3/2 kernel and optimizes parameters using BFGS. Returns the log marginal likelihood and the trained model.
 
   **Parameters**:\
